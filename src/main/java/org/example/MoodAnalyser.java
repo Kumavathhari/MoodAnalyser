@@ -45,25 +45,25 @@ public class MoodAnalyser {
         try {
             MoodAnalyser moodAnalyser1 = new MoodAnalyser("I am in Sad Mood");
             String mood1 = moodAnalyser1.analyseMood();
-            System.out.println("Test case 3 : " + mood1); // Expected: Sad
+            System.out.println("Test case 3 : " + mood1);
 
             MoodAnalyser moodAnalyser2 = new MoodAnalyser("I am in Happy Mood");
             String mood2 = moodAnalyser2.analyseMood();
-            System.out.println("Test case 3 : " + mood2); // Expected: Happy
+            System.out.println("Test case 3 : " + mood2);
 
             MoodAnalyser moodAnalyser3 = new MoodAnalyser(null);
             String mood3 = moodAnalyser3.analyseMood();
-            System.out.println("Test case 3.1 : " + mood3); // This line should not be reached
+            System.out.println("Test case 3.1 : " + mood3);
         } catch (MoodAnalysisException e) {
-            System.out.println("Test case 3.1 : " + e.getMessage() + " ErrorType: " + e.getErrorType()); // Expected: Mood is NULL
+            System.out.println("Test case 3.1 : " + e.getMessage() + " ErrorType: " + e.getErrorType());
         }
 
         try {
             MoodAnalyser moodAnalyser4 = new MoodAnalyser("");
             String mood4 = moodAnalyser4.analyseMood();
-            System.out.println("Test case 3.2 : " + mood4); // This line should not be reached
+            System.out.println("Test case 3.2 : " + mood4);
         } catch (MoodAnalysisException e) {
-            System.out.println("Test case 3.2 : " + e.getMessage() + " ErrorType: " + e.getErrorType()); // Expected: Mood is EMPTY
+            System.out.println("Test case 3.2 : " + e.getMessage() + " ErrorType: " + e.getErrorType());
         }
     }
 }
